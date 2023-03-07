@@ -3,6 +3,7 @@ package com.helloworld.citas.infra.console;
 import com.helloworld.citas.models.Cita;
 import com.helloworld.citas.service.CitaService;
 
+import javax.annotation.PostConstruct;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -16,6 +17,7 @@ public class ConsoleReader {
 		this.citaService = citaService;
 	}
 
+	@PostConstruct
 	public void init(){
 		Scanner sc = new Scanner(System.in);
 		int opcion = 1;
